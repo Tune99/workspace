@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  ~ Copyright 2016 Red Hat, Inc. and/or its affiliates
+  ~ and other contributors as indicated by the @author tags.
+  ~
+  ~ Licensed under the Apache License, Version 2.0 (the "License");
+  ~ you may not use this file except in compliance with the License.
+  ~ You may obtain a copy of the License at
+  ~
+  ~ http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~ Unless required by applicable law or agreed to in writing, software
+  ~ distributed under the License is distributed on an "AS IS" BASIS,
+  ~ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~ See the License for the specific language governing permissions and
+  ~ limitations under the License.
+  -->
+
+<EntitiesDescriptor Name="urn:keycloak" xmlns="urn:oasis:names:tc:SAML:2.0:metadata"
+					xmlns:dsig="http://www.w3.org/2000/09/xmldsig#">
+	<EntityDescriptor entityID="http://10.0.2.250/auth/realms/domo">
+		<IDPSSODescriptor WantAuthnRequestsSigned="true"
+			protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+                        <KeyDescriptor use="signing">
+                          <dsig:KeyInfo>
+                            <dsig:KeyName>w640wTnTBWj3sU2yWF0beQ6oUC04_4byXSexshEcTcs</dsig:KeyName>
+                            <dsig:X509Data>
+                              <dsig:X509Certificate>MIIClzCCAX8CBgFyvev7PDANBgkqhkiG9w0BAQsFADAPMQ0wCwYDVQQDDARkb21vMB4XDTIwMDYxNjE2MTU1OFoXDTMwMDYxNjE2MTczOFowDzENMAsGA1UEAwwEZG9tbzCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAJ+l4I0ZWzWRXhvUBCbBdrg7J2fweNDPT2HnHRIDzGYHyFgEIOE2B9btPWnvQhNcBHBGrD3oTanS0wtkdrdTnUtKV3S8JCpeRCRpDUUcAQ3ZV9MgzM9zokdEJvQSS5FJ2gfINjhhF74YpFJYF+sLJVLJOUKiysCgFyGjjiVk0jtYqALKgzwy6kguD+A87BJKi2d0oWypZyywkbBHEG/5zOUGG4L6XNPVgLUC3x0It14VWRGrphYDfH0E6z25SDHVCKLBDSmsatEvI9WByv26gZC852Dk0ob5aeC7chR7noj9yOYKEKN/EOWkOQ377lncn6KHTaVKk6ndU9EAzPk6M6cCAwEAATANBgkqhkiG9w0BAQsFAAOCAQEADxrhxLzGoSQzucw4JUFeekj+9ZjJWCcP2wGvh81nEKmrNe1j5FaUaZxrU9hoVMGBnafTglyw2+V483bDfjJ7CxYTNqV+Q8sDRCkidp9GI2AmY1eXL/8UqOu8gINOj5AxydRK5TAxG5B9DAdg5BELs/Y8wycsqfwlnFLwaA1KckvM+LhQgH4EwX9WObMHka8GwpZTcAkBW7wmzBnLru2gYQv5vRHT2/7u9XNLUJctltRjS1xfMnM5IxFB3ah9yULYKEIkTm25IJiXa32/JViJ3El+7XGo3bOwZyAICVDHLjrxiMgFSvxOFQ6HsJI8LWqG88wLxgVotFWuNzUjjjVmmA==</dsig:X509Certificate>
+                            </dsig:X509Data>
+                          </dsig:KeyInfo>
+                        </KeyDescriptor>
+
+			<SingleLogoutService
+					Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+					Location="http://10.0.2.250/auth/realms/domo/protocol/saml" />
+			<SingleLogoutService
+					Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+					Location="http://10.0.2.250/auth/realms/domo/protocol/saml" />
+			<NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:persistent</NameIDFormat>
+			<NameIDFormat>urn:oasis:names:tc:SAML:2.0:nameid-format:transient</NameIDFormat>
+			<NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:unspecified</NameIDFormat>
+			<NameIDFormat>urn:oasis:names:tc:SAML:1.1:nameid-format:emailAddress</NameIDFormat>
+			<SingleSignOnService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST"
+				Location="http://10.0.2.250/auth/realms/domo/protocol/saml" />
+			<SingleSignOnService
+				Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect"
+				Location="http://10.0.2.250/auth/realms/domo/protocol/saml" />
+			<SingleSignOnService
+				Binding="urn:oasis:names:tc:SAML:2.0:bindings:SOAP"
+				Location="http://10.0.2.250/auth/realms/domo/protocol/saml" />
+		</IDPSSODescriptor>
+	</EntityDescriptor>
+</EntitiesDescriptor>
